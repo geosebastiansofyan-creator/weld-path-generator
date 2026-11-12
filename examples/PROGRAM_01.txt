@@ -1,0 +1,138 @@
+PROGRAM  = 1
+COMMENT  : 1 play-back cycle = 5 jigs (40 global points)
+GENERATED: 2026-11-12 16:01
+
+; ==================== POSITION VARIABLES ====================
+; --- Jig 1  (alpha = -50.0 deg, aframe) ---
+P001   X= +522.45  Y= +429.88  Z=   +0.00   ; AF_LIN_L_F_S
+P002   X= +498.74  Y= +421.95  Z=   +0.00   ; AF_LIN_L_F_E
+P003   X= +518.01  Y= +443.16  Z=   +0.00   ; AF_LIN_L_B_S
+P004   X= +494.30  Y= +435.23  Z=   +0.00   ; AF_LIN_L_B_E
+P005   X= +526.38  Y= +433.18  Z=   +0.00   ; AF_LIN_R_F_S
+P006   X= +514.45  Y= +411.21  Z=   +0.00   ; AF_LIN_R_F_E
+P007   X= +514.07  Y= +439.86  Z=   +0.00   ; AF_LIN_R_B_S
+P008   X= +502.15  Y= +417.89  Z=   +0.00   ; AF_LIN_R_B_E
+P009   X= +360.01  Y= +376.08  Z=   +0.00   ; AF_CIR_1_S
+P010   X= +356.67  Y= +380.05  Z=   +6.76   ; AF_CIR_1_M
+P011   X= +351.61  Y= +386.08  Z=   +3.50   ; AF_CIR_1_E
+P012   X= +351.61  Y= +386.08  Z=   +3.50   ; AF_CIR_2_S
+P013   X= +352.32  Y= +385.23  Z=   -4.95   ; AF_CIR_2_M
+P014   X= +357.76  Y= +378.76  Z=   -6.06   ; AF_CIR_2_E
+
+; --- Jig 2  (alpha = -25.0 deg, aframe) ---
+P015   X= +291.82  Y= +610.40  Z=   +0.00   ; AF_LIN_L_F_S
+P016   X= +273.68  Y= +593.19  Z=   +0.00   ; AF_LIN_L_F_E
+P017   X= +282.18  Y= +620.56  Z=   +0.00   ; AF_LIN_L_B_S
+P018   X= +264.05  Y= +603.35  Z=   +0.00   ; AF_LIN_L_B_E
+P019   X= +293.99  Y= +615.05  Z=   +0.00   ; AF_LIN_R_F_S
+P020   X= +292.47  Y= +590.10  Z=   +0.00   ; AF_LIN_R_F_E
+P021   X= +280.02  Y= +615.90  Z=   +0.00   ; AF_LIN_R_B_S
+P022   X= +278.49  Y= +590.95  Z=   +0.00   ; AF_LIN_R_B_E
+P023   X= +167.34  Y= +492.99  Z=   +0.00   ; AF_CIR_1_S
+P024   X= +162.64  Y= +495.18  Z=   +6.76   ; AF_CIR_1_M
+P025   X= +155.50  Y= +498.51  Z=   +3.50   ; AF_CIR_1_E
+P026   X= +155.50  Y= +498.51  Z=   +3.50   ; AF_CIR_2_S
+P027   X= +156.51  Y= +498.04  Z=   -4.95   ; AF_CIR_2_M
+P028   X= +164.17  Y= +494.47  Z=   -6.06   ; AF_CIR_2_E
+
+; --- Jig 3  (alpha = +0.0 deg, box) ---
+P029   X=  +15.00  Y= +375.00  Z=   +0.00   ; BOX_L1_S
+P030   X=  +15.00  Y= +425.00  Z=   +0.00   ; BOX_L1_E
+P031   X=  -15.00  Y= +425.00  Z=   +0.00   ; BOX_L2_S
+P032   X=  -15.00  Y= +375.00  Z=   +0.00   ; BOX_L2_E
+
+; --- Jig 4  (alpha = +25.0 deg, ring) ---
+P033   X= -146.39  Y= +373.09  Z=   +0.00   ; RING_S
+P034   X= -179.61  Y= +385.18  Z=   +0.00   ; RING_V1
+P035   X= -191.70  Y= +351.96  Z=   +0.00   ; RING_M
+P036   X= -158.48  Y= +339.87  Z=   +0.00   ; RING_V2
+
+; --- Jig 5  (alpha = +50.0 deg, ring) ---
+P037   X= -290.35  Y= +276.27  Z=   +0.00   ; RING_S
+P038   X= -325.57  Y= +273.18  Z=   +0.00   ; RING_V1
+P039   X= -322.49  Y= +237.96  Z=   +0.00   ; RING_M
+P040   X= -287.27  Y= +241.05  Z=   +0.00   ; RING_V2
+
+; ==================== STEP INSTRUCTIONS ====================
+[START]
+
+; ===== JIG 1  (alpha = -50.0 deg, aframe) =====
+0001   100% JOINT        P001           A1 T1   ; Jig 1 weld 1 approach
+0002   AS                145A 20.0V     A1 T1   ; Arc start (linear)
+0003   42 cm/min LIN     P002           A1 T1   ; Weld 1 LIN
+0004   AE                               A1 T1   ; Arc end weld 1
+0005   100% JOINT        P003           A1 T1   ; Jig 1 weld 2 approach
+0006   AS                145A 20.0V     A1 T1   ; Arc start (linear)
+0007   42 cm/min LIN     P004           A1 T1   ; Weld 2 LIN
+0008   AE                               A1 T1   ; Arc end weld 2
+0009   100% JOINT        P005           A1 T1   ; Jig 1 weld 3 approach
+0010   AS                145A 20.0V     A1 T1   ; Arc start (linear)
+0011   42 cm/min LIN     P006           A1 T1   ; Weld 3 LIN
+0012   AE                               A1 T1   ; Arc end weld 3
+0013   100% JOINT        P007           A1 T1   ; Jig 1 weld 4 approach
+0014   AS                145A 20.0V     A1 T1   ; Arc start (linear)
+0015   42 cm/min LIN     P008           A1 T1   ; Weld 4 LIN
+0016   AE                               A1 T1   ; Arc end weld 4
+0017   100% JOINT        P009           A1 T1   ; Jig 1 weld 5 approach
+0018   AS                115A 19.5V     A1 T1   ; Arc start (circular)
+0019   33 cm/min CIR     P010 P011      A1 T1   ; Weld 5 CIR
+0020   AE                               A1 T1   ; Arc end weld 5
+0021   100% JOINT        P012           A1 T1   ; Jig 1 weld 6 approach
+0022   AS                115A 19.5V     A1 T1   ; Arc start (circular)
+0023   33 cm/min CIR     P013 P014      A1 T1   ; Weld 6 CIR
+0024   AE                               A1 T1   ; Arc end weld 6
+
+; ===== JIG 2  (alpha = -25.0 deg, aframe) =====
+0025   100% JOINT        P015           A1 T1   ; Jig 2 weld 1 approach
+0026   AS                145A 20.0V     A1 T1   ; Arc start (linear)
+0027   42 cm/min LIN     P016           A1 T1   ; Weld 1 LIN
+0028   AE                               A1 T1   ; Arc end weld 1
+0029   100% JOINT        P017           A1 T1   ; Jig 2 weld 2 approach
+0030   AS                145A 20.0V     A1 T1   ; Arc start (linear)
+0031   42 cm/min LIN     P018           A1 T1   ; Weld 2 LIN
+0032   AE                               A1 T1   ; Arc end weld 2
+0033   100% JOINT        P019           A1 T1   ; Jig 2 weld 3 approach
+0034   AS                145A 20.0V     A1 T1   ; Arc start (linear)
+0035   42 cm/min LIN     P020           A1 T1   ; Weld 3 LIN
+0036   AE                               A1 T1   ; Arc end weld 3
+0037   100% JOINT        P021           A1 T1   ; Jig 2 weld 4 approach
+0038   AS                145A 20.0V     A1 T1   ; Arc start (linear)
+0039   42 cm/min LIN     P022           A1 T1   ; Weld 4 LIN
+0040   AE                               A1 T1   ; Arc end weld 4
+0041   100% JOINT        P023           A1 T1   ; Jig 2 weld 5 approach
+0042   AS                115A 19.5V     A1 T1   ; Arc start (circular)
+0043   33 cm/min CIR     P024 P025      A1 T1   ; Weld 5 CIR
+0044   AE                               A1 T1   ; Arc end weld 5
+0045   100% JOINT        P026           A1 T1   ; Jig 2 weld 6 approach
+0046   AS                115A 19.5V     A1 T1   ; Arc start (circular)
+0047   33 cm/min CIR     P027 P028      A1 T1   ; Weld 6 CIR
+0048   AE                               A1 T1   ; Arc end weld 6
+
+; ===== JIG 3  (alpha = +0.0 deg, box) =====
+0049   100% JOINT        P029           A1 T1   ; Jig 3 weld 1 approach
+0050   AS                145A 20.0V     A1 T1   ; Arc start (linear)
+0051   42 cm/min LIN     P030           A1 T1   ; Weld 1 LIN
+0052   AE                               A1 T1   ; Arc end weld 1
+0053   100% JOINT        P031           A1 T1   ; Jig 3 weld 2 approach
+0054   AS                145A 20.0V     A1 T1   ; Arc start (linear)
+0055   42 cm/min LIN     P032           A1 T1   ; Weld 2 LIN
+0056   AE                               A1 T1   ; Arc end weld 2
+
+; ===== JIG 4  (alpha = +25.0 deg, ring) =====
+0057   100% JOINT        P033           A1 T1   ; Jig 4 weld 1 approach
+0058   AS                115A 19.5V     A1 T1   ; Arc start (circular)
+0059   33 cm/min CIR     P034 P035      A1 T1   ; Weld 1 CIR
+0060   33 cm/min CIR     P036 P033      A1 T1   ; Weld 1 CIR
+0061   AE                               A1 T1   ; Arc end weld 1
+
+; ===== JIG 5  (alpha = +50.0 deg, ring) =====
+0062   100% JOINT        P037           A1 T1   ; Jig 5 weld 1 approach
+0063   AS                115A 19.5V     A1 T1   ; Arc start (circular)
+0064   33 cm/min CIR     P038 P039      A1 T1   ; Weld 1 CIR
+0065   33 cm/min CIR     P040 P037      A1 T1   ; Weld 1 CIR
+0066   AE                               A1 T1   ; Arc end weld 1
+0067   100% JOINT        HOME           A1 T1   ; Return home - 5 jig cycle done
+[END]
+
+; Total global points : 40
+; Total steps         : 67
